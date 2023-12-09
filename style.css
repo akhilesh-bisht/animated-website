@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+ 
+ #nav {
+    height: 145px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    gap: 45px;
+    z-index: 999;
+
+} 
+#cursor{
+    height: 17px;
+    width: 17px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: all linear 0.1s;
+}
+
+#nav img {
+    height: 70px;
+}
+
+#nav h4 {
+    margin-left: 20px;
+    cursor: pointer;
+}
+ video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+} 
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.424);
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+
+}
+
+.page1 h1 {
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+
+}
+
+.page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px green;
+    z-index: -1;
+
+}
+
+.page1 h2 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.page1 p {
+
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+}
+ .page2{
+  min-height: 100vh;
+    width: 100%;
+    z-index: 10; 
+} 
+.scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+.scroller::-webkit-scrollbar{
+     display: none;
+} 
+.scrollr-1{ 
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+/* .scrollr-1{
+    display: inline-block;
+    white-space: nowrap; */
+/* } */
+.scroller h4{
+    display: inline-block;
+    font-size: 110px;
+    font-family: 900;
+    margin-right: 10px;
+    color: transparent;
+    transition: all linear 0.5s;
+    -webkit-text-stroke: 2px #95c11e;
+
+}
+.scroller h4:hover{
+    color: #95c11e;
+}
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#about-us{
+   
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    align-items: center;
+    padding: 0 50px;
+    margin-top: 55px;
+    justify-content: space-around;
+}
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 19px;
+    object-fit: cover;
+}
+.about-para{
+    width: 50%;
+    text-align: center;
+}
+.about-para h1{
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.about-para p{
+    font-size: 20px;
+    line-height: 26px;
+}
+.next{
+    margin-top: 20px;
+    font-size: 20px;
+}
+#card-continer{
+    /* background-color: red; */
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 70px;
+    
+}
+.card{
+    height: 90%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    transition: all ease 0.6s;
+
+
+}
+.card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.card2{
+background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.card3{
+background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.overlap{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding-top: 190px;
+    padding: 50px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlap h3{
+    color: #000;
+    font-size: 50px;
+
+
+}
+.overlap p{
+    margin-top: 15px;
+    color: #000;
+    font-size: 25px;
+    line-height: 30px;
+}
+.card:hover .overlap{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(1,1,0,20deg);
+}
+#green{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    margin-top: 55px;
+    justify-content: space-between;
+    background: linear-gradient( to left bottom,#b2e91d, #ace022 );
+    
+}
+#green h3{
+    width: 45%;
+    font-size: 27px;
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+#green img{
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
+}
+#page-3{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page-3 p{
+    font-size: 30px;
+    font-weight: 700;
+    width: 55%;
+    text-align: center;
+    line-height: 45px;
+}
+#page-3 img{
+    position: absolute;
+    height: 60px;
+}
+.collen-1{
+    left: 15%;
+    top: 25%;
+}
+.collen-2{
+    right: 15%;
+    bottom: 25%;
+}
+#page-4{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 8;
+    
+}
+.elem{
+    height: 30vh;
+    width: 25%;
+    background-color: #709507;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 22px 12px;
+    border-radius: 12px;
+ 
+   
+    
+}
+.elem h2{
+    font-size: 35px;
+    color: black;
+    font-weight: bolder;
+  
+}#page-4 h1{
+    font-size: 100px;
+    text-align: center;
+    text-align: center;
+    position: absolute;
+    top: -50px;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #fff;
+    color: #000;
+    z-index: -7;
+    }
+    #fotter{
+        height: 40vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        
+        background: linear-gradient(to left bottom, #119f3a , #95c11e);
+    }
+    #fotter img{
+        width: 100px;
+    }
+    #fotter h3{
+        color: #000;
+        text-transform: uppercase;
+        font-size: 23px;
+        font-weight: bolder;
+        margin-bottom: 6px;
+    }
+    #fotter p{
+        color: black;
+    }
